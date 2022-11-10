@@ -8,4 +8,5 @@
   Eclipse Maven Project, Dependencies: mysql-connector-java 5.1.49, hibernate-core 5.6.14.Final<br>
   Database: MySQL 8.0 workbench<br>
   Server: Tomcat 9.0<br>
+  JDK 8.0<
 </div>
