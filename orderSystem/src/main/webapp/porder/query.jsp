@@ -2,7 +2,8 @@
     pageEncoding="BIG5"
     import="Dao.porder.implPorder"
     import="java.util.List"
-    import="Model.porder"%>
+    import="Model.porder"
+    import="Model.member"%>
     
  <%
  List<porder> l = null;
@@ -26,6 +27,7 @@
  {
 	 l=new implPorder().queryAll();
  }
+ member m = (member)session.getAttribute("M");
  %>
 <!DOCTYPE html>
 <html>
@@ -42,10 +44,10 @@
 			<form action="query.jsp">
 				<table width=500 align=center border=1>
 					<tr>
-						<td>訂單資料
+						<td align=center><b><%=m.getName() %></b> 訂單資料
 					<tr>
-						<td>
-						輸入金額:
+						<td align=center>
+						輸入金額：
 						從<input type="text" name="start" size=5>到<input type="text" name="end" size=5>
 						<input type="submit" value="確定">					
 						

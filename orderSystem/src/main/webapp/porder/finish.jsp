@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=BIG5"
     pageEncoding="BIG5"
-    import="Model.porder"%>
+    import="Model.porder"
+    import="Model.member"%>
  <%
  porder p=(porder)session.getAttribute("P");
+ member m = (member)session.getAttribute("M");
  
  %>
 <!DOCTYPE html>
@@ -32,7 +34,7 @@ print(text)
 			<td>
 			<table width=450 align=center border=1>
 				<tr>
-					<td colspan=2 align=center><h3>訂單完成~這是你的訂單細目</h3>
+					<td colspan=2 align=center><h3>訂單完成~這是<%=m.getName() %>的訂單細目</h3>
 				<tr>
 					<td width=100 align=center><h5>桌號</h5>
 					<td ><%=p.getDesk() %>

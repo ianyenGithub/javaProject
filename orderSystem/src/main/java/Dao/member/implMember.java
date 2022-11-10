@@ -78,7 +78,7 @@ public class implMember implements memberDao{
 	}
 
 	@Override
-	public member queryMamber(String username, String password) {
+	public member queryMember(String username, String password) {
 		EntityManager em = DbConnection.getDb();
 		String JPQL = "select m from member m where m.username=?1 and m.password=?2";
 		Query q = em.createQuery(JPQL);

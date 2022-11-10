@@ -2,10 +2,11 @@
     pageEncoding="BIG5"
     import="Dao.porder.implPorder"
     import="java.util.List"
-    import="Model.porder"%>
+    import="Model.porder"
+    import="Model.member"%>
 <%
 List<porder> l=new implPorder().queryAll();    
-    
+member m = (member)session.getAttribute("M");
    %>
 <!DOCTYPE html>
 <html>
@@ -22,7 +23,7 @@ List<porder> l=new implPorder().queryAll();
 			<form action="../updateController" method="post">
 				<table width=500 align=center border=1>
 					<tr align=center>
-						<td>修改訂單資料
+						<td>修改 <b><%=m.getName() %></b> 訂單資料
 					<tr align=center>
 						<td>
 						ID:<input type="text" name="id" size=3>

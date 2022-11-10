@@ -1,40 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID">
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app>
 	<display-name>orderSys</display-name>
 	<servlet>
-		<description>
-		</description>
-		<display-name>addMemberController</display-name>
 		<servlet-name>addMemberController</servlet-name>
+		<display-name>addMemberController</display-name>
+		<description></description>
 		<servlet-class>Controller.member.addMemberController</servlet-class>
 	</servlet>
 	<servlet>
-		<description>
-		</description>
-		<display-name>LoginController</display-name>
 		<servlet-name>LoginController</servlet-name>
+		<display-name>LoginController</display-name>
+		<description></description>
 		<servlet-class>Controller.member.LoginController</servlet-class>
 	</servlet>
 	<servlet>
-		<description>
-		</description>
-		<display-name>addOrderController</display-name>
+		<servlet-name>LogoutController</servlet-name>
+		<display-name>LogoutController</display-name>
+		<description></description>
+		<servlet-class>Controller.member.LogoutController</servlet-class>
+	</servlet>
+	<servlet>
 		<servlet-name>addOrderController</servlet-name>
+		<display-name>addOrderController</display-name>
+		<description></description>
 		<servlet-class>Controller.porder.addOrderController</servlet-class>
 	</servlet>
 	<servlet>
-		<description>
-		</description>
-		<display-name>updateController</display-name>
-		<servlet-name>updateController</servlet-name>
-		<servlet-class>Controller.porder.updateController</servlet-class>
+		<servlet-name>deleteController</servlet-name>
+		<display-name>deleteController</display-name>
+		<description></description>
+		<servlet-class>Controller.porder.deleteController</servlet-class>
 	</servlet>
 	<servlet>
-		<description>
-		</description>
-		<display-name>deleteController</display-name>
-		<servlet-name>deleteController</servlet-name>
-		<servlet-class>Controller.porder.deleteController</servlet-class>
+		<servlet-name>updateController</servlet-name>
+		<display-name>updateController</display-name>
+		<description></description>
+		<servlet-class>Controller.porder.updateController</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>addMemberController</servlet-name>
@@ -45,15 +48,20 @@
 		<url-pattern>/LoginController</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>addOrderController</servlet-name>
-		<url-pattern>/addOrderController</url-pattern>
+		<servlet-name>LogoutController</servlet-name>
+		<url-pattern>/LogoutController</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>updateController</servlet-name>
-		<url-pattern>/updateController</url-pattern>
+		<servlet-name>addOrderController</servlet-name>
+		<url-pattern>/addOrderController</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>deleteController</servlet-name>
 		<url-pattern>/deleteController</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>updateController</servlet-name>
+		<url-pattern>/updateController</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

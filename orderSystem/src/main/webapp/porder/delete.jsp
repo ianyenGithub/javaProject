@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=BIG5"
     pageEncoding="BIG5"
     import="Model.porder"
+    import="Model.member"
     import="Dao.porder.implPorder"
     import="java.util.List"%>
   <%
   List<porder> l=new implPorder().queryAll();  
-    
+  member m = (member)session.getAttribute("M");
     %>
 <!DOCTYPE html>
 <html>
@@ -22,7 +23,7 @@
 			<form action="../deleteController" method="post">
 				<table width=500 align=center border=1>
 					<tr align=center>
-						<td>刪除訂單資料
+						<td>刪除 <b><%=m.getName() %></b> 訂單資料
 					<tr align=center>
 						<td>
 						ID:<input type="text" name="id" size=3>

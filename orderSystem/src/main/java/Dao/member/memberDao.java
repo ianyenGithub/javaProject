@@ -11,7 +11,7 @@ public interface memberDao {
 	List<member> queryAll();
 	boolean queryUsername(String username);
 	member queryMember(int id);
-	member queryMamber(String username, String password);
+	member queryMember(String username, String password);
 	//U
 	void update(member m);
 	//D

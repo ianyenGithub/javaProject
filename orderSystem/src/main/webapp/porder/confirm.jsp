@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=BIG5"
     pageEncoding="BIG5"
-    import="Model.porder"%>
+    import="Model.porder"
+    import="Model.member"%>
  <%
  /*
  1.request-->接收-->desk,A,B,C
@@ -18,6 +19,8 @@
  porder p=new porder(Desk,A,B,C);
  
  session.setAttribute("P",p);//pass to addOrderController
+ 
+ member m = (member)session.getAttribute("M");
  %>
 <!DOCTYPE html>
 <html>
@@ -33,7 +36,7 @@
 			<td>
 			<table width=450 align=center border=1>
 				<tr>
-					<td colspan=2 align=center><h3>這是你的訂單細目</h3>
+					<td colspan=2 align=center><h3><%=m.getName() %> 這是你的訂單細目</h3>
 				<tr>
 					<td width=100 align=center><h5>桌號</h5>
 					<td ><%=p.getDesk() %>

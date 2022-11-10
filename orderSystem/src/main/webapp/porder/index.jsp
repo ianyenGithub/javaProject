@@ -22,7 +22,9 @@
 					<td align=center><a href="update.jsp">3)­×§ï</a>
 				<tr>
 					<td align=center><a href="delete.jsp">4)§R°£</a>
-				
+				<tr>
+					<td align=center><a href="../LogoutController" >5)µn¥X</a>
+						
 			</table>
 			
 			
